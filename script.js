@@ -1,22 +1,39 @@
+const imageGallery = document.getElementById('imageGallery');
+let imageList = ['']; // Array to store the image URLs
+
 document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    // Prevent the form from submitting
-    event.preventDefault();
+    event.preventDefault(); // Prevent the form from submitting
 
     const fileInput = document.getElementById('imageUpload');
-    // Get the first file from the input
-    const file = fileInput.files[0];
+    const files = fileInput.files; // Get the list of files
 
-    if (file) {
+    // Process each file
+    Array.from(files).forEach(file => {
         const reader = new FileReader();
-
-        // Define the onload function to update the image source
+        
         reader.onload = function(e) {
-            const latestImage = document.getElementById('latestImage');
-            // Set the source of the image to the result of FileReader
-            latestImage.src = e.target.result; 
+            imageList.unshift(e.target.result); // Add new image to the beginning of the array
+            displayImage(); // Update the displayed images
         };
 
-        // Read the file as a data URL
-        reader.readAsDataURL(file);
-    }
+        reader.readAsDataURL(file); // Read the file as a data URL
+    });
+
+    // Clear the file input after upload
+    fileInput.value = '';
 });
+
+// Function to display images
+function displayImage() {
+    imageGallery.innerHTML = ''; // Clear existing images
+
+    // Limit the displayed images to the latest upload
+    const recentImages = imageList.slice(0, 1);
+    
+    recentImages.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Uploaded Image';
+        imageGallery.appendChild(img); // Add image to the gallery
+    });
+}
