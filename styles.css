@@ -16,7 +16,7 @@ form {
 }
 
 input[type="file"] {
-    display: block;
+    display: inline-block;
     margin: 0 auto 10px;
 }
 
@@ -27,7 +27,7 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    display: block;
+    display: inline-block;
     margin: 0 auto;
 }
 
