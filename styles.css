@@ -35,11 +35,6 @@ button:hover {
     background: #0056b3;
 }
 
-.latest-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -53,21 +48,6 @@ body {
     text-align: center;
 }
 
-.image-preview {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.image-preview img {
-    max-width: 100px;
-    max-height: 100px;
-    margin: 5px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 a{
     margin-left: 16px;
     margin-right: 16px;
@@ -76,4 +56,13 @@ a{
 hr.rounded{
     border-top: 3px solid #5a5a5a;
     border-radius: 5px;
+}
+
+#imageGallery {
+    margin-top: 20px;
+}
+
+#imageGallery img {
+    max-width: 100%;
+    max-height: 100%;
 }
