@@ -1,4 +1,4 @@
-# Image Upload Web Application
+# Photo Library
 
 Welcome to the Photo Library! This project allows users to upload image files, and automatically displays the latest uploaded image.
 
