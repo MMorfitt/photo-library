@@ -24,6 +24,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
 });
 
 // Function to display images
+// Built to potentially do more than 1 image- unneeded for now
 function displayImage() {
     imageGallery.innerHTML = ''; // Clear existing images
 
