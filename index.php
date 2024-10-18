@@ -13,15 +13,29 @@
         ?>
         <br>
 
-
         <form id="uploadForm">
             <input type="file" id="imageUpload" accept="image/*" required>
             <button type="submit">Upload Image</button>
         </form>
-        <div class="latest-image">
-            <h2>Latest Uploaded Image:</h2>
-            <div id="imageGallery"></div>
-        </div>
+
+        <h2>Latest Image</h2>
+        <?php
+        $dir = "images/";
+        $files = glob($dir . "/*.*");
+        // The amount of files that will be displayed
+        $numFilesDisplayed = 1;
+
+        usort($files, function($a, $b){
+            // Only return the most recent file
+            return (filemtime($a) < filemtime($b));
+        });
+
+        $files = array_slice($files, 0, $numFilesDisplayed);
+
+        foreach($files as $file)
+            echo "<img class='image-wrapper' src='" . $file. "' alt='code'>";
+        ?>
+
     </div>
 </body>
 </html>
