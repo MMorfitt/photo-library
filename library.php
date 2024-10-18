@@ -19,7 +19,9 @@
         // Display all files present in the images folder
         // This is in alphabetical order of the filename
         foreach($files as $file)
-            echo "<img class='image-wrapper' src='" . $file . "' alt='code'>"
+            echo "<img class='image-wrapper' src='" . $file . "' alt='code'>";
+
+        include 'view/footer.php';
         ?>
         <br>
     </div>

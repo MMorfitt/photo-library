@@ -40,6 +40,8 @@
         // In this case, just the 1 most recent
         foreach($files as $file)
             echo "<img class='latest-image' src='" . $file . "' alt='code'>";
+
+        include 'view/footer.php';
         ?>
 
     </div>
