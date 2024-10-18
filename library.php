@@ -13,7 +13,7 @@
 
         // Define the image directory
         $dir = "images/";
-        // Define the files we are working with
+        // Fetch the files
         $files = glob($dir . "/*.*");
 
         // Display all files present in the images folder
