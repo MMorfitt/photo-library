@@ -12,6 +12,7 @@ Welcome to the Photo Library! This project allows users to upload image files, a
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP
 - **Storage**: Local filesystem for image storage
 
 ## Installation
