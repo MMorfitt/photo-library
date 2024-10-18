@@ -20,7 +20,9 @@
 
         <h2>Latest Image</h2>
         <?php
+        // Define the image directory
         $dir = "images/";
+        // Fetch the files
         $files = glob($dir . "/*.*");
         // The amount of files that will be displayed
         $numFilesDisplayed = 1;
@@ -30,8 +32,12 @@
             return (filemtime($a) < filemtime($b));
         });
 
+        // Take a slice of the files in order from newest to oldest
+        // For this page it is 1 file, the most recent
         $files = array_slice($files, 0, $numFilesDisplayed);
 
+        // Print the predefined number of files
+        // In this case, just the 1 most recent
         foreach($files as $file)
             echo "<img class='latest-image' src='" . $file . "' alt='code'>";
         ?>
