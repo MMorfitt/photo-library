@@ -33,7 +33,7 @@
         $files = array_slice($files, 0, $numFilesDisplayed);
 
         foreach($files as $file)
-            echo "<img class='image-wrapper' src='" . $file. "' alt='code'>";
+            echo "<img class='latest-image' src='" . $file . "' alt='code'>";
         ?>
 
     </div>
