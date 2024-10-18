@@ -8,21 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <!--  HEADER -->
-        <h1>Photo Library</h1>
-        <div>
-            <a href="index.php">Home</a>
-            |
-            <a href="library.php">Library</a>
-        </div>
+        <?php
+        include 'view/header.php';
+        ?>
         <br>
-        <hr class="rounded">
-
-        <!-- /HEADER -->
-        <br>
-
-        
-
     </div>
 </body>
 </html>
