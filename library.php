@@ -11,10 +11,13 @@
         <?php
         include 'view/header.php';
 
-        // display all files presnt in the images folder
+        // Define the image directory
         $dir = "images/";
+        // Define the files we are working with
         $files = glob($dir . "/*.*");
 
+        // Display all files present in the images folder
+        // This is in alphabetical order of the filename
         foreach($files as $file)
             echo "<img class='image-wrapper' src='" . $file . "' alt='code'>"
         ?>
