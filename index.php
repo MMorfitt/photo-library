@@ -13,9 +13,9 @@
         ?>
         <br>
 
-        <form id="uploadForm">
-            <input type="file" id="imageUpload" accept="image/*" required>
-            <button type="submit">Upload Image</button>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="uploadImage" id="uploadImage" required>
+            <button type="submit" value="Upload Image" name="submit">Upload Image</button>
         </form>
 
         <h2>Latest Image</h2>
