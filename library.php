@@ -10,6 +10,13 @@
     <div class="container">
         <?php
         include 'view/header.php';
+
+        // display all files presnt in the images folder
+        $dir = "images/";
+        $files = glob($dir . "/*.*");
+
+        foreach($files as $file)
+            echo "<img class='image-wrapper' src='" . $file . "' alt='code'>"
         ?>
         <br>
     </div>
