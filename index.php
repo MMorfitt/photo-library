@@ -11,9 +11,9 @@
         <!--  HEADER -->
         <h1>Photo Library</h1>
         <div>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             |
-            <a href="library.html">Library</a>
+            <a href="library.php">Library</a>
         </div>
         <br>
         <hr class="rounded">
@@ -31,6 +31,5 @@
             <div id="imageGallery"></div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
